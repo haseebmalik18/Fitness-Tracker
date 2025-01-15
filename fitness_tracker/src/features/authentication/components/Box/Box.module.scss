@@ -1,0 +1,26 @@
+.root {
+  @media screen and (min-width: 768px) {
+    padding: 2rem;
+    width: 30rem;
+    margin: 0 auto;
+    background: #181818; /* Dark theme background */
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* Initial shadow */
+    color: #e1e1e1;
+    position: relative;
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Transition properties explicitly listed */
+  }
+
+  // Hover effect
+  &:hover {
+    box-shadow: 0 10px 30px #28a745; /* Cyan glow  #28a745*/
+    background: #202020; /* Slightly lighter background */
+  }
+
+  // For smaller screens
+  @media screen and (max-width: 767px) {
+    padding: 1.5rem;
+    width: 90%;
+    margin: 1rem;
+  }
+}

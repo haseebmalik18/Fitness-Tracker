@@ -1,0 +1,45 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: #28a745; /* Primary blue for background */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 9999px; /* Fully rounded for a pill-shaped button */
+  margin-block: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+
+  &:disabled {
+    color: #888888; /* Greyed-out text for disabled */
+    background-color: #333333; /* Dark grey for disabled state */
+    cursor: not-allowed;
+  }
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &:not(:disabled, .outline):hover {
+    background-color: #218838; /* Darker blue on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+  }
+
+  &.outline {
+    background-color: transparent; /* Transparent background for outline */
+    color: #28a745;
+    border: 2px solid #28a745; /* Solid border matching primary color */ /*#0078ff*/
+    padding: 0.75rem; /* Adjust padding for outline style */
+    font-weight: normal;
+    transition: color 0.3s ease, border-color 0.3s ease;
+
+    &:not(:disabled):hover {
+      color: #218838; /* Darker blue on hover */
+      border-color: #218838; /* Border matches hover text */
+    }
+  }
+}
